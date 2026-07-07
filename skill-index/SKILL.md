@@ -25,6 +25,7 @@ description: |
 | 📄 PPT/Slides/幻灯片/演示 | `guizang-ppt` | 网页 PPT |
 | 🎞️ 视频/Video | `video-sop` + `video-edit-local` | 视频嵌入 + 本地编辑 |
 | 🏗️ 部署/上线/发布/Deploy | `deploy-sop` + `project-gateway` + `preview-first-deploy` | 部署流水线 + 目录映射 + 先预览 |
+| 🧠 学习闭环/RUA/个性化学习 | `dynamos-core` | DynamOS 旗舰: RUA拆解→计划→课件→追踪→分析→优化 |
 | 📦 课程/建课/教案/DET/IELTS | `course-authoring-sop` | 课程编纂全流程 |
 | 📝 内容/文案/文章/帖子 | `content-creator-suite` + `de-ai-writing` | 平台内容 + 去 AI 化 |
 | 🔊 Kee 声音/Kee 配音 | `kee-voice-gen` | VoxCPM-0.5B 克隆 |
