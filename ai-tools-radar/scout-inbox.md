@@ -1,0 +1,5 @@
+### 2026-07-06
+- **OpenHands**: An open-source coding agent inspired by Devin that executes code, checks results, and iterates to solve software engineering tasks. Relevance: Directly aligns with your interest in AI coding agents for development automation.
+- **DeerFlow**: A multi-agent framework from ByteDance for long-horizon tasks like research and coding, using sandboxes and subagents. Relevance: A powerful new tool in the multi-agent space you follow (AutoGen, CrewAI) for complex automation.
+- **Moshi**: A full-duplex spoken LLM that processes audio directly without a text-to-speech conversion step, enabling very low-latency, natural conversation. Relevance: Potential breakthrough for DynaSaurus, enabling truly responsive AI language tutors.
+- **Fish Speech V1.5**: A high-accuracy multilingual voice cloning model with strong performance in English, Chinese, and Japanese. Relevance: Ideal for creating diverse, high-quality audio content for your language courses and content channels.

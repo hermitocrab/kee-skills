@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TEDx — The Cocoon & The Catalyst</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  /* ===== RESET & BASE ===== */
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  html { font-size: 16px; scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', -apple-system, 'Helvetica Neue', sans-serif;
+    background: #050510;
+    color: #ffffff;
+    overflow-x: hidden;
+  }
+
+  /* ===== SLIDE CONTAINER ===== */
+  .slide-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .slide {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 3rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Background gradient overlay */
+  .slide::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, #050510 0%, #0A0A1E 100%);
+    z-index: 0;
+  }
+
+  .slide > * { position: relative; z-index: 1; }
+
+  /* ===== EDITORIAL LAYOUT GRID ===== */
+  .grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    width: 100%;
+    align-items: center;
+  }
+
+  .grid-2-4 { grid-template-columns: 0.4fr 0.6fr; }
+  .grid-6-4 { grid-template-columns: 0.6fr 0.4fr; }
+  .grid-3-1 { grid-template-columns: 0.3fr 0.7fr; }
+
+  .grid-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    width: 100%;
+  }
+
+  .full { grid-column: 1 / -1; }
+
+  /* ===== TYPOGRAPHY ===== */
+  .slide-title {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #8877AA;
+    margin-bottom: 2rem;
+  }
+
+  .headline {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.5rem;
+  }
+
+  .headline-lg { font-size: 4.25rem; }
+  .headline-xl { font-size: 5rem; letter-spacing: -0.03em; }
+  .headline-sm { font-size: 2.5rem; }
+  .headline-xs { font-size: 1.75rem; }
+
+  .subhead {
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #E8E0F0;
+    margin-bottom: 1.5rem;
+    max-width: 32em;
+  }
+
+  .body-text {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #C4B5D0;
+  }
+
+  .caption {
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: #8877AA;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  .quote {
+    font-size: 1.375rem;
+    font-weight: 400;
+    font-style: italic;
+    line-height: 1.5;
+    color: #ffffff;
+  }
+
+  .accent {
+    font-weight: 600;
+  }
+
+  /* ===== ACCENT COLORS ===== */
+  .gold { color: #F5A623; }
+  .purple { color: #9F44D3; }
+  .teal { color: #00BFBF; }
+  .coral { color: #FF4560; }
+  .pink { color: #E84DA0; }
+  .muted { color: #8877AA; }
+  .light { color: #E8E0F0; }
+
+  /* ===== GLASSMORPHISM CARDS ===== */
+  .card {
+    background: rgba(18, 18, 40, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 1rem;
+    padding: 2.5rem;
+  }
+
+  .card-gold { border-color: rgba(245, 166, 35, 0.15); }
+  .card-coral { border-color: rgba(255, 69, 96, 0.15); }
+  .card-purple { border-color: rgba(159, 68, 211, 0.15); }
+
+  /* ===== CIRCLE DECORATOR ===== */
+  .circle-decor {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    font-size: 3rem;
+    font-weight: 800;
+    color: #ffffff;
+    flex-shrink: 0;
+  }
+
+  .circle-decor-sm {
+    width: 4rem;
+    height: 4rem;
+    font-size: 1.75rem;
+  }
+
+  /* ===== SEPARATOR ===== */
+  .separator {
+    width: 4rem;
+    height: 2px;
+    margin: 1.5rem 0;
+  }
+  .separator-gold { background: #F5A623; }
+  .separator-coral { background: #FF4560; }
+  .separator-muted { background: rgba(136, 119, 170, 0.3); }
+
+  /* ===== IMAGE PLACEHOLDER ===== */
+  .img-placeholder {
+    background: #0A0A1E;
+    border: 1px dashed rgba(136, 119, 170, 0.3);
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #8877AA;
+    font-size: 0.875rem;
+    font-style: italic;
+    text-align: center;
+    padding: 2rem;
+    min-height: 300px;
+  }
+
+  .img-placeholder-full { min-height: 500px; min-width: 100%; }
+
+  /* ===== STAGGERED TEXT ===== */
+  .text-cascade > * + * { margin-top: 0.5rem; }
+  .text-cascade .line { display: block; }
+
+  /* ===== THREE-TIER COMPRESSION ===== */
+  .compression-tier {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .tier-box {
+    padding: 1.25rem 2rem;
+    border-radius: 0.75rem;
+    text-align: center;
+    min-width: 320px;
+  }
+
+  .tier-box h3 { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.25rem; }
+  .tier-box p { font-size: 0.875rem; color: #E8E0F0; }
+
+  .tier-arrow {
+    color: rgba(136, 119, 170, 0.5);
+    font-size: 1.5rem;
+  }
+
+  /* ===== BUTTON ===== */
+  .rua-button {
+    display: inline-block;
+    background: linear-gradient(135deg, #F5A623 0%, #E84DA0 100%);
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.5rem;
+    padding: 0.75rem 2.5rem;
+    border-radius: 2rem;
+    box-shadow: 0 0 40px rgba(245, 166, 35, 0.3);
+  }
+
+  /* ===== PAGE NUMBER ===== */
+  .page-num {
+    position: absolute;
+    bottom: 1.5rem;
+    right: 2rem;
+    font-size: 0.625rem;
+    color: #8877AA;
+    font-weight: 400;
+    z-index: 2;
+  }
+
+  /* ===== PARTICLE DOTS ===== */
+  .particle-dots {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    z-index: 0;
+    pointer-events: none;
+  }
+  .dot {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background: rgba(232, 224, 240, 0.15);
+    border-radius: 50%;
+  }
+  .dot:nth-child(1) { top: 15%; left: 20%; width: 4px; height: 4px; opacity: 0.2; }
+  .dot:nth-child(2) { top: 35%; left: 70%; width: 2px; height: 2px; opacity: 0.15; }
+  .dot:nth-child(3) { top: 60%; left: 15%; width: 3px; height: 3px; opacity: 0.25; }
+  .dot:nth-child(4) { top: 80%; left: 50%; width: 5px; height: 5px; opacity: 0.1; }
+  .dot:nth-child(5) { top: 20%; left: 85%; width: 2px; height: 2px; opacity: 0.2; }
+  .dot:nth-child(6) { top: 70%; left: 80%; width: 3px; height: 3px; opacity: 0.15; }
+  .dot:nth-child(7) { top: 45%; left: 40%; width: 4px; height: 4px; opacity: 0.1; }
+  .dot:nth-child(8) { top: 90%; left: 25%; width: 2px; height: 2px; opacity: 0.2; }
+  .dot:nth-child(9) { top: 10%; left: 55%; width: 3px; height: 3px; opacity: 0.15; }
+  .dot:nth-child(10) { top: 55%; left: 90%; width: 4px; height: 4px; opacity: 0.1; }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 768px) {
+    .slide { padding: 2rem 1.5rem; }
+    .grid-2 { grid-template-columns: 1fr; gap: 2rem; }
+    .grid-3 { grid-template-columns: 1fr; }
+    .headline { font-size: 2.25rem; }
+    .headline-xl { font-size: 2.75rem; }
+    .headline-lg { font-size: 2.5rem; }
+    .img-placeholder-full { min-height: 300px; }
+    .tier-box { min-width: auto; width: 100%; }
+  }
+</style>
+</head>
+<body>
+
+<div class="slide-container">
+
+  <!-- ===== SLIDE 1: TITLE ===== -->
+  <section class="slide" id="slide-1">
+    <div class="particle-dots">
+      <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+      <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+      <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+    <div class="grid-2 grid-2-4" style="max-width: 1000px;">
+      <div style="text-align: center;">
+        <div class="img-placeholder" style="width: 320px; height: 320px; border-radius: 50%; margin: 0 auto;">
+          Kee's Portrait<br>Cinematic Side-Lit
+        </div>
+        <div style="width: 328px; height: 328px; border-radius: 50%; border: 2px solid #F5A623; margin: -334px auto 0; pointer-events: none;"></div>
+      </div>
+      <div>
+        <div class="headline" style="margin-bottom: 0.25rem;">THE COCOON</div>
+        <div class="headline" style="font-size: 3rem; color: #9F44D3; margin-bottom: 0.25rem;">&</div>
+        <div class="headline gold">THE CATALYST</div>
+        <div class="separator separator-gold"></div>
+        <div class="caption">Kee Lee · TEDxChengdu · May 1, 2026</div>
+      </div>
+    </div>
+    <span class="page-num">1/14</span>
+  </section>
+
+  <!-- ===== SLIDE 2: THE COCOON ===== -->
+  <section class="slide" id="slide-2">
+    <div class="grid-2 grid-6-4" style="max-width: 1100px;">
+      <div class="img-placeholder img-placeholder-full">
+        Classroom — Bird's Eye View<br>Students in a grid
+      </div>
+      <div class="card">
+        <div class="slide-title">The Cocoon</div>
+        <h2 class="headline-sm gold" style="margin-bottom: 1.5rem;">The Information Cocoon</h2>
+        <p style="font-size: 1.125rem; margin-bottom: 0.5rem;">Teacher → Content Bottleneck</p>
+        <p style="font-size: 1.125rem; margin-bottom: 1.5rem;">Student → Passive Consumer</p>
+        <div class="separator separator-coral"></div>
+        <p class="headline-xs coral" style="margin-bottom: 0.25rem;">Drowning in data.</p>
+        <p class="headline-xs teal">Starving for understanding.</p>
+      </div>
+    </div>
+    <span class="page-num">2/14</span>
+  </section>
+
+  <!-- ===== SLIDE 3: THE SHIFT ===== -->
+  <section class="slide" id="slide-3">
+    <div class="grid-2" style="max-width: 1100px;">
+      <div class="card card-coral">
+        <div class="slide-title">The Shift</div>
+        <div class="headline" style="margin-bottom: 1rem;">AI arrived.</div>
+        <div class="text-cascade" style="margin-bottom: 1.5rem;">
+          <span class="line" style="font-size: 1.125rem;">Schools terrified of cheating</span>
+          <span class="line" style="font-size: 1.125rem;">Teachers terrified of irrelevance</span>
+          <span class="line" style="font-size: 1.125rem;">I was terrified too</span>
+        </div>
+        <div class="separator separator-gold"></div>
+        <div class="headline-sm gold" style="margin-bottom: 0.75rem;">Prompt engineering &gt; AI itself</div>
+        <p class="coral" style="font-weight: 600;">A supercomputer without the right question<br>= a very expensive paperweight</p>
+      </div>
+      <div class="img-placeholder img-placeholder-full">
+        Abstract AI — Node Grid Network<br>Generative art, colorful data flow
+      </div>
+    </div>
+    <span class="page-num">3/14</span>
+  </section>
+
+  <!-- ===== SLIDE 4: EVOLUTION ===== -->
+  <section class="slide" id="slide-4">
+    <div class="grid-3" style="max-width: 1100px;">
+      <div class="card" style="border-color: rgba(107, 47, 142, 0.3);">
+        <div class="headline-sm coral" style="margin-bottom: 1rem;">TEACHER</div>
+        <p style="font-size: 1rem; margin-bottom: 0.5rem;">Content Provider</p>
+        <p style="font-size: 1rem; margin-bottom: 0.5rem;">Competing with AI</p>
+        <p style="font-size: 1rem;">Bottleneck of knowledge</p>
+      </div>
+      <div style="text-align: center;">
+        <div class="img-placeholder" style="min-height: 350px;">
+          Metamorphosis<br>Person walking into light
+        </div>
+        <div class="headline gold" style="margin-top: 0.5rem;">→</div>
+      </div>
+      <div class="card card-gold">
+        <div class="headline-sm purple" style="margin-bottom: 1rem;">LEARNING ARCHITECT</div>
+        <p style="font-size: 1rem; margin-bottom: 1rem;">Strategist · Architect · Coach</p>
+        <p class="teal">AI is not perfect.<br>That's why the human role<br>must evolve.</p>
+      </div>
+    </div>
+    <span class="page-num">4/14</span>
+  </section>
+
+  <!-- ===== SLIDE 5: PAPERWEIGHT ===== -->
+  <section class="slide" id="slide-5">
+    <div class="grid-2 grid-2-4" style="max-width: 1000px;">
+      <div class="img-placeholder img-placeholder-full">
+        Person holding brick + phone<br>Contrast: old vs new
+      </div>
+      <div>
+        <p style="font-size: 1.25rem; font-style: italic; margin-bottom: 0.25rem;">You can hand someone</p>
+        <p style="font-size: 1.75rem; font-style: italic; margin-bottom: 0.5rem;">a supercomputer...</p>
+        <p style="font-size: 1.25rem; font-style: italic; margin-bottom: 0.25rem;">But if they don't know</p>
+        <p style="font-size: 1.25rem; font-style: italic; margin-bottom: 1.5rem;">how to ask the right questions...</p>
+        <div class="separator separator-muted"></div>
+        <p style="font-size: 1.125rem; margin-top: 1rem;">it's just a very</p>
+        <div class="headline-lg coral" style="margin-top: 0.25rem;">expensive<br>paperweight.</div>
+      </div>
+    </div>
+    <span class="page-num">5/14</span>
+  </section>
+
+  <!-- ===== SLIDE 6: DynamOS + R.U.A. ===== -->
+  <section class="slide" id="slide-6">
+    <div style="max-width: 1000px; width: 100%; position: relative;">
+      <div class="img-placeholder" style="position: absolute; top: 0; right: 0; width: 180px; height: 180px; border-radius: 0.75rem; min-height: auto;">
+        Brain / Neural Network
+      </div>
+      <div class="headline gold">DynamOS</div>
+      <p class="subhead">A Learning OS for the AI Era</p>
+      <p class="muted" style="margin-bottom: 3rem;">Churns out magic based on one core concept:</p>
+      <div class="grid-3" style="gap: 3rem; text-align: center;">
+        <div>
+          <div class="circle-decor" style="background: #FF4560; margin: 0 auto;">R</div>
+          <p style="font-size: 1.25rem; margin-top: 1rem;">Recognize</p>
+        </div>
+        <div>
+          <div class="circle-decor" style="background: #00BFBF; margin: 0 auto;">U</div>
+          <p style="font-size: 1.25rem; margin-top: 1rem;">Understand</p>
+        </div>
+        <div>
+          <div class="circle-decor" style="background: #F5A623; margin: 0 auto;">A</div>
+          <p style="font-size: 1.25rem; margin-top: 1rem;">Apply</p>
+        </div>
+      </div>
+    </div>
+    <span class="page-num">6/14</span>
+  </section>
+
+  <!-- ===== SLIDE 7: RECOGNIZE ===== -->
+  <section class="slide" id="slide-7">
+    <div class="grid-2" style="max-width: 1000px;">
+      <div>
+        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 2rem;">
+          <div class="circle-decor" style="background: #FF4560;">R</div>
+          <div class="headline-lg" style="margin-bottom: 0;">ECOGNIZE</div>
+        </div>
+        <div class="card">
+          <p style="font-size: 1.125rem; margin-bottom: 0.75rem;">Ask AI to identify the gap</p>
+          <p class="teal" style="font-weight: 600; margin-bottom: 0.75rem;">MFP = Meaning · Form · Pronunciation</p>
+          <p class="gold" style="font-style: italic;">The art of asking the right question</p>
+        </div>
+      </div>
+      <div class="img-placeholder" style="min-height: 400px;">
+        Student comparing<br>textbook + phone
+      </div>
+    </div>
+    <span class="page-num">7/14</span>
+  </section>
+
+  <!-- ===== SLIDE 8: UNDERSTAND ===== -->
+  <section class="slide" id="slide-8">
+    <div style="max-width: 1000px; width: 100%;">
+      <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 2rem;">
+        <div class="circle-decor" style="background: #00BFBF;">U</div>
+        <div class="headline-lg" style="margin-bottom: 0;">NDERSTAND</div>
+      </div>
+      <div class="card" style="max-width: 900px;">
+        <div style="display: flex; gap: 1.5rem; align-items: center; margin-bottom: 1.5rem;">
+          <span style="font-size: 1.25rem; color: #E8E0F0;">Suggestion</span>
+          <span style="color: rgba(136, 119, 170, 0.4);">→</span>
+          <span style="font-size: 1.25rem; font-weight: 600;">Banter</span>
+          <span style="color: rgba(136, 119, 170, 0.4);">→</span>
+          <span style="font-size: 1.25rem; font-weight: 700; color: #FF4560;">Threat</span>
+        </div>
+        <div class="separator separator-muted"></div>
+        <p style="font-size: 1rem; margin: 1rem 0;">AI can explain quantum physics like a 5-year-old<br>or a PhD student.</p>
+        <p class="headline-xs gold">Understanding is adjusting that dial.</p>
+      </div>
+    </div>
+    <span class="page-num">8/14</span>
+  </section>
+
+  <!-- ===== SLIDE 9: APPLY ===== -->
+  <section class="slide" id="slide-9">
+    <div class="grid-2" style="max-width: 1000px;">
+      <div>
+        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 2rem;">
+          <div class="circle-decor" style="background: #F5A623;">A</div>
+          <div class="headline-lg" style="margin-bottom: 0;">PPLY</div>
+        </div>
+        <div class="card">
+          <div style="display: flex; align-items: center; gap: 1.5rem; margin-bottom: 1.5rem;">
+            <div class="circle-decor circle-decor-sm" style="background: #FF4560;">R</div>
+            <span class="headline-sm gold" style="margin-bottom: 0;">⇄</span>
+            <div class="circle-decor circle-decor-sm" style="background: #F5A623;">A</div>
+          </div>
+          <p style="font-size: 1.125rem; margin-bottom: 0.5rem;">Find the gap. Analyse it. Practice.</p>
+          <p class="teal" style="font-weight: 600;">AI generates practice tasks based on your gap.</p>
+        </div>
+      </div>
+      <div class="img-placeholder" style="min-height: 400px;">
+        Action —<br>practicing, coding, building
+      </div>
+    </div>
+    <span class="page-num">9/14</span>
+  </section>
+
+  <!-- ===== SLIDE 10: BOOKS ANALOGY ===== -->
+  <section class="slide" id="slide-10">
+    <div class="grid-2" style="max-width: 1000px;">
+      <div class="img-placeholder" style="min-height: 400px;">
+        Warm library book stack<br>Beautiful lighting
+      </div>
+      <div class="card">
+        <p class="quote" style="margin-bottom: 1.5rem;">
+          When books appeared, did people<br>
+          try to hide them?
+        </p>
+        <div class="separator separator-muted"></div>
+        <p style="font-size: 1.125rem; margin: 1rem 0 0.25rem;">Stop treating AI like a</p>
+        <p style="font-size: 1.125rem; margin-bottom: 1rem;">cheating device.</p>
+        <p style="font-size: 1rem; margin-bottom: 0.25rem;">Start treating it like a</p>
+        <div class="headline-sm gold">cognitive<br>exoskeleton.</div>
+      </div>
+    </div>
+    <span class="page-num">10/14</span>
+  </section>
+
+  <!-- ===== SLIDE 11: META-REVEAL ===== -->
+  <section class="slide" id="slide-11">
+    <div style="max-width: 1000px; width: 100%;">
+      <div class="slide-title" style="margin-bottom: 1rem;">The Meta-Reveal</div>
+      <div class="img-placeholder" style="min-height: 450px; margin-bottom: 1.5rem;">
+        REAL AI Conversation Screenshot<br>
+        Prompt → Speech Pipeline<br>
+        (Replace with actual screenshot)
+      </div>
+      <p class="teal headline-xs" style="margin-bottom: 0.5rem; font-weight: 700;">
+        Everything you've experienced today was co-architected<br>with an AI assistant.
+      </p>
+      <p style="font-size: 1rem;">Human strategist + AI computational engine.</p>
+    </div>
+    <span class="page-num">11/14</span>
+  </section>
+
+  <!-- ===== SLIDE 12: THE VISION ===== -->
+  <section class="slide" id="slide-12">
+    <div style="max-width: 800px; width: 100%;">
+      <div class="slide-title">The Vision</div>
+      <div class="compression-tier">
+        <div class="tier-box" style="background: rgba(18,18,40,0.85); backdrop-filter: blur(20px); border: 1px solid rgba(255,69,96,0.3);">
+          <h3 style="color: #FF4560;">One Prompt</h3>
+          <p>A single structured prompt following the R.U.A. framework</p>
+        </div>
+        <span class="tier-arrow">⭳</span>
+        <div class="tier-box" style="background: rgba(18,18,40,0.85); backdrop-filter: blur(20px); border: 1px solid rgba(159,68,211,0.3);">
+          <h3 style="color: #9F44D3;">One Agent</h3>
+          <p>An AI agent with R.U.A. as its core logic</p>
+        </div>
+        <span class="tier-arrow">⭳</span>
+        <div class="tier-box" style="background: rgba(18,18,40,0.85); backdrop-filter: blur(20px); border: 2px solid rgba(245,166,35,0.4);">
+          <h3 style="color: #F5A623;">One Button</h3>
+          <p>A learning OS built into any interface</p>
+        </div>
+      </div>
+      <div style="text-align: center; margin-top: 2rem;">
+        <span class="rua-button">R.U.A.</span>
+      </div>
+    </div>
+    <span class="page-num">12/14</span>
+  </section>
+
+  <!-- ===== SLIDE 13: CALL TO ACTION ===== -->
+  <section class="slide" id="slide-13">
+    <div class="grid-2 grid-2-4" style="max-width: 1000px; gap: 2rem;">
+      <div class="img-placeholder" style="min-height: 400px; border-radius: 50%; width: 320px; height: 320px; margin: 0 auto;">
+        Kee —<br>hands open, face lit
+      </div>
+      <div>
+        <div class="headline-lg coral" style="margin-bottom: 0.25rem;">Stop.</div>
+        <div class="headline-lg gold" style="margin-bottom: 1.5rem;">Become the Architect.</div>
+        <div class="headline-sm teal" style="margin-bottom: 0.5rem;">Let AI handle the data.</div>
+        <div class="headline-sm pink" style="margin-bottom: 2rem;">Let us handle the humanity.</div>
+        <div class="separator separator-muted"></div>
+        <p class="quote" style="margin-top: 1rem; font-size: 1.125rem;">Learning is learning how to learn.</p>
+      </div>
+    </div>
+    <span class="page-num">13/14</span>
+  </section>
+
+  <!-- ===== SLIDE 14: CLOSING ===== -->
+  <section class="slide" id="slide-14">
+    <div style="text-align: center;">
+      <div style="font-size: 4rem; margin-bottom: 1.5rem; color: #F5A623;">🦋</div>
+      <div class="headline gold" style="margin-bottom: 1rem;">Learning is learning<br>how to learn.</div>
+      <div class="headline-lg" style="margin-bottom: 1.5rem;">Thank you.</div>
+      <p class="caption">Kee Lee · TEDxChengdu · May 1, 2026</p>
+    </div>
+    <span class="page-num">14/14</span>
+  </section>
+
+</div>
+
+</body>
+</html>
