@@ -1,7 +1,7 @@
 ---
 name: course-authoring-sop
 description: |
-  Kee Lee Course Authoring System — comprehensive SOP for designing courses AND web pages.
+  Author Course Authoring System — comprehensive SOP for designing courses AND web pages.
   MANDATORY pre-flight before ANY course build or web page build.
   Covers: student profiling → course architecture → content production → AI enhancement → QA & deploy → maintenance.
   Source: rkrk.io/adult-english/course-authoring-sop.html (HTML), MEMORY.md rules.
@@ -9,7 +9,7 @@ description: |
 
 # 课程编纂 SOP v2
 
-> Kee Lee · AI-Native Course Authoring System
+> Author · AI-Native Course Authoring System
 > 从零到上线：任何课程类型、任何考试、任何水平。
 > 这是一台课程工厂。输入学生画像，输出完整课程包。
 
@@ -20,14 +20,14 @@ description: |
 **This runs FIRST. Before touching any file. Before spawning any agent.**
 
 ### Step 0: iMessage History Check
-- **When SrKeeda uses 指示代词 (那个/这个/上次说的/前几天) or references prior content** → search iMessage history FIRST before responding
+- **When Author uses 指示代词 (那个/这个/上次说的/前几天) or references prior content** → search iMessage history FIRST before responding
 - Command: `imsg history --chat-id 2 --limit 500 | grep -i "<keywords>"`
 - Never guess what he's referring to. Find the exact context.
 
 ### Step 1: Knowledge Base Check
 1. **iCloud Websites folder** — check existing pages:
    ```
-   ls "/Users/agentii/Library/Mobile Documents/com~apple~CloudDocs/Websites/<TOPIC>/"
+   ls "/home/user/Library/Mobile Documents/com~apple~CloudDocs/Websites/<TOPIC>/"
    ```
 2. **Obsidian / Wiki** — search for existing notes on the topic
 3. **Existing HTML pages** — read them before building new ones to avoid duplication
@@ -57,7 +57,7 @@ Verify:
 4. **素材优先于设计** — 内容对了再排版，别反过来
 5. **学生视角是唯一视角** — 每份材料都要问：学生拿到手知道怎么用吗？
 6. **⛔ 先查后建** — 开工前必须跑完 Pre-Flight 才能碰文件 (BURNED 2026-07-07)
-7. **⛔ iMessage 指示代词检测** — SrKeeda 说"那个/这个"时先搜聊天记录 (BURNED 2026-07-07)
+7. **⛔ iMessage 指示代词检测** — Author 说"那个/这个"时先搜聊天记录 (BURNED 2026-07-07)
 
 ---
 
@@ -97,7 +97,7 @@ Verify:
 已有资源：
 - Teaching Arsenal 里有没有这个考试的资料？路径：_______
 - iCloud Websites 里有没有现成页面？
-  ls "/Users/agentii/Library/Mobile Documents/com~apple~CloudDocs/Websites/<考试名>/"
+  ls "/home/user/Library/Mobile Documents/com~apple~CloudDocs/Websites/<考试名>/"
 - 有没有合适的教材？书名：_______
 - 有没有真题/模考题库？来源：_______
 - 有没有现成的 PPT/教案可以改？路径：_______
@@ -302,7 +302,7 @@ Web page pre-flight:
 □ 读了 design-taste-frontend/SKILL.md？
 □ 检查了目标部署架构？（Tunnel vs Vercel vs nginx）
 □ 如果是 ielts.rkrk.io：文件放 dev/ielts-with-kee/，重启 server.py
-□ 先 deploy 到 test.rkrk.io，SrKeeda 审批后再上生产
+□ 先 deploy 到 test.rkrk.io，Author 审批后再上生产
 ```
 
 ---
@@ -360,7 +360,7 @@ Web page pre-flight:
 □ text-overflow: word-break:break-word on inline text？
 □ overflow-x:hidden on body？
 □ 缓存刷新链接 ?v=N appended？
-□ 发给 SrKeeda 的链接是最新版？
+□ 发给 Author 的链接是最新版？
 ```
 
 ### 4.3 部署
@@ -380,7 +380,7 @@ cd ~/dev/ielts-with-kee && PORT=9091 nohup python3 server.py > /tmp/ielts-server
 部署后必须做：
 1. 手机打开看一眼
 2. 缓存刷新链接（`?v=timestamp`）
-3. 发链接给 SrKeeda
+3. 发链接给 Author
 
 ---
 
@@ -411,11 +411,11 @@ cd ~/dev/ielts-with-kee && PORT=9091 nohup python3 server.py > /tmp/ielts-server
 ### 快速启动：建一个课程网页
 
 ```
-1. 搜 iMessage 历史 → 确认 SrKeeda 的需求上下文
+1. 搜 iMessage 历史 → 确认 Author 的需求上下文
 2. 查 iCloud Websites → 读已有页面 → 避免重复
 3. 跑 project-gateway → 确认部署架构
 4. 读 design-system-kee → 确认设计系统
-5. 建页 → preview (test.rkrk.io) → SrKeeda 审批 → 生产
+5. 建页 → preview (test.rkrk.io) → Author 审批 → 生产
 6. 重启 server.py（如果是 Tunnel 服务）
-7. 发链接 ?v=N 给 SrKeeda
+7. 发链接 ?v=N 给 Author
 ```

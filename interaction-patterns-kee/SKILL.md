@@ -1,10 +1,10 @@
 ---
 name: interaction-patterns-kee
 description: |
-  Kee Lee's interaction design rules. Touch targets, swipe/scroll/tap behaviors, card flip mechanics, navigation patterns, modal rules, loading states, animation dos and don'ts. Load when building any interactive UI — landing pages, SPAs, courseware, dashboards, or any page with user interaction.
+  Author's interaction design rules. Touch targets, swipe/scroll/tap behaviors, card flip mechanics, navigation patterns, modal rules, loading states, animation dos and don'ts. Load when building any interactive UI — landing pages, SPAs, courseware, dashboards, or any page with user interaction.
 ---
 
-# Interaction Patterns — Kee Lee (SrKeeda)
+# Interaction Patterns — Author (Author)
 
 > Last updated: 2026-06-23
 > Source: 550+ main sessions, memory files, SOUL.md Section VIII, dynasaurus sessions
@@ -282,7 +282,7 @@ Skeleton shimmer: background gradient sweep, 1.5s infinite
 }
 ```
 
-**Source:** 2026-05-24 design rejection feedback (SrKeeda hated cursor glow, particles, orbs), SOUL.md
+**Source:** 2026-05-24 design rejection feedback (Author hated cursor glow, particles, orbs), SOUL.md
 
 ---
 
@@ -397,7 +397,7 @@ Tap response:     < 100ms to feel instant (button active state)
 | Popup on page load | Instant bounce |
 | "Click here" as link text | Not descriptive, accessibility fail |
 
-**Source:** SOUL.md, Apple HIG, multiple SrKeeda corrections
+**Source:** SOUL.md, Apple HIG, multiple Author corrections
 
 ---
 

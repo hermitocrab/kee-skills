@@ -2,7 +2,7 @@
 name: web-ux-sop
 description: |
   Web page UX standards for Kee's courseware. In-page editing, WeChat copy, PDF export.
-  Burned 2026-06-30 — SrKeeda: "网页SOP更新：一键复制无markdown格式维持排版复制粘贴到微信"
+  Burned 2026-06-30 — Author: "网页SOP更新：一键复制无markdown格式维持排版复制粘贴到微信"
   Triggered by: "网页交互", "编辑按钮", "导出PDF", "复制到微信"
 ---
 

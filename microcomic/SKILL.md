@@ -666,6 +666,6 @@ skills/microcomic/
 
 ## Version History
 
-- **v2.1** — 2026-06-29: Live API integration. Wired Stage 3-4 to Atlas Cloud MJ V8.1 API (atlascloud.ai) using SrKeeda's existing CloudAtlas key. Replaced imaginary MJ API calls with real REST endpoints (generateImage + prediction polling). Confirmed API key works with `midjourney/v8.1/text-to-image` model.
+- **v2.1** — 2026-06-29: Live API integration. Wired Stage 3-4 to Atlas Cloud MJ V8.1 API (atlascloud.ai) using Author's existing CloudAtlas key. Replaced imaginary MJ API calls with real REST endpoints (generateImage + prediction polling). Confirmed API key works with `midjourney/v8.1/text-to-image` model.
 - **v2.0** — 2026-06-29: Production-grade upgrade (Gemini Pro 3.1 review). Replaced seed-based consistency with `--cref`/`--sref`/`--cw` architecture. Added single-character framing constraint. Reduced dialogue 15→8-10 words. TTS-first audio-driven timing (ffprobe). Sidechaincompress audio ducking. QC circuit breaker (max 3 retries).
 - **v1.0** — 2026-06-29: Initial skill design. 8-stage automated pipeline from idea to publishable micro-comic video.

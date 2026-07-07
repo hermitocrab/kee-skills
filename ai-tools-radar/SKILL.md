@@ -1,11 +1,11 @@
 ---
 name: ai-tools-radar
-description: "Curated radar of AI tools and models worth watching. Update when SrKeeda shares new discoveries. Use when evaluating tools for DynaSaurus, DynamOS, or teaching workflow."
+description: "Curated radar of AI tools and models worth watching. Update when Author shares new discoveries. Use when evaluating tools for DynaSaurus, DynamOS, or teaching workflow."
 ---
 
 # AI Tools Radar
 
-Live watchlist of open-source AI tools and models. Updated from SrKeeda's X/Twitter discoveries.
+Live watchlist of open-source AI tools and models. Updated from Author's X/Twitter discoveries.
 
 ## 🎯 Quick Pick: What To Integrate First
 
@@ -99,5 +99,5 @@ md2wechat-skill              DynaSaurus UI               GPT-SoVITS
 - Cross-sells to LangCert B2
 
 ## References
-- All sourced from SrKeeda's shared X/Twitter links, 2026-05-27
+- All sourced from Author's shared X/Twitter links, 2026-05-27
 - Skills: `dynasaurus-audio/`, `x-reader/`, `project-gateway/`, `claude-code-research/`, `oss-contribution-guard/`

@@ -98,4 +98,4 @@ Before publishing ANY content:
 
 ## Learned
 
-2026-05-27 — Created from SrKeeda's mandate. All content from this point forward uses these rules. Burned into permanent memory.
+2026-05-27 — Created from Author's mandate. All content from this point forward uses these rules. Burned into permanent memory.

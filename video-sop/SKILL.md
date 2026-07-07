@@ -114,7 +114,7 @@ python3 -m yt_dlp --proxy http://127.0.0.1:7897 \
 | TUN 000 but proxy 200 | TUN stack routing bug | Use `--proxy http://127.0.0.1:7897` flag |
 | All nodes return 000 | Network down or all nodes dead | Check internet, restart Clash Verge |
 
-**⛔ If traffic is 0.00 GB, STOP. Do not waste time trying yt-dlp flags. Tell SrKeeda: proxy subscription needs renewal.**
+**⛔ If traffic is 0.00 GB, STOP. Do not waste time trying yt-dlp flags. Tell Author: proxy subscription needs renewal.**
 
 ## Player Layout
 
@@ -188,7 +188,7 @@ Instead: copy to `~/dev/rkrk.io/files/` and send the URL.
 # 1. Copy file to web-accessible directory
 cp /path/to/large-file.ext ~/dev/rkrk.io/files/
 
-# 2. Send the URL to SrKeeda
+# 2. Send the URL to Author
 # Format: https://rkrk.io/files/filename.ext
 ```
 

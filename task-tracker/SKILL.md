@@ -5,11 +5,11 @@ description: Track pending tasks and auto-report outstanding items that haven't 
 
 # Task Tracker
 
-Use this skill to track tasks that SrKeeda assigns and have not yet been reported as complete.
+Use this skill to track tasks that Author assigns and have not yet been reported as complete.
 
 ## How it works
 
-1. **When SrKeeda assigns a task**, write it to `memory/pending-tasks.json`
+1. **When Author assigns a task**, write it to `memory/pending-tasks.json`
 2. **When you complete it and report back**, mark it done in the same file
 3. **A daily cron job** checks for overdue/unreported tasks and reminds you
 
@@ -44,7 +44,7 @@ Use this skill to track tasks that SrKeeda assigns and have not yet been reporte
 
 - `pending` → Assigned but not yet worked on
 - `in_progress` → Being worked on
-- `done` → Completed. Set `reported: false` until you tell SrKeeda the result
+- `done` → Completed. Set `reported: false` until you tell Author the result
 - `blocked` → Can't proceed (document why in notes)
 - `cancelled` → No longer needed
 
@@ -54,7 +54,7 @@ Use this skill to track tasks that SrKeeda assigns and have not yet been reporte
    - Deployed something? Curl the URL and check the response.
    - Changed a config? Restart the service and confirm it's running.
    - Wrote a file? Verify it exists and has the right content.
-2. **Never set `reported: true` until you've messaged SrKeeda the result.**
+2. **Never set `reported: true` until you've messaged Author the result.**
 3. **If you can't verify a task completed, keep it as `in_progress` and explain why.**
 4. **When in doubt between 'done' and 'almost done', pick 'almost done'.**
 
@@ -64,4 +64,4 @@ The cron job in HEARTBEAT.md or a system cron will periodically:
 
 1. Read `memory/pending-tasks.json`
 2. Find tasks where `reported: false`
-3. Remind me to report them to SrKeeda
+3. Remind me to report them to Author

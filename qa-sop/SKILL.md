@@ -2,7 +2,7 @@
 name: qa-sop
 description: |
   QA inspection standards for all deliverables — video, audio, PDF, HTML, printables.
-  Burned 2026-06-30 — SrKeeda: "SOP中添加可听可视的QA，检测各个产出品的质量，不合格就回炉重造"
+  Burned 2026-06-30 — Author: "SOP中添加可听可视的QA，检测各个产出品的质量，不合格就回炉重造"
   Triggered by: "QA", "质检", "检查质量", "audit", "verify"
 ---
 
@@ -71,5 +71,5 @@ QA 步骤不能幻想，也不能想当然。
 1. 产出 → 跑对应 QA checklist
 2. 任何不合格 → 标记 FAIL → 回炉
 3. 修复 → 重新 QA
-4. 全部 PASS → 才能发给 SrKeeda
+4. 全部 PASS → 才能发给 Author
 ```

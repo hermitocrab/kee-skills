@@ -55,4 +55,4 @@ The open source community — traditionally a "technical utopia" built on shared
 - "中国天才们正在排队崩开源" by MaxForAI (HBR/虎嗅, Tencent News, May 2026)
 - Hunter Bown / DeepSeek-TUI exploitation case
 - vLLM fake PR / job agency scandal
-- Learned: 2026-05-27 from SrKeeda's shared X articles
+- Learned: 2026-05-27 from Author's shared X articles

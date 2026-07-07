@@ -7,9 +7,9 @@ All rkrk.io site changes go to preview first, production only after explicit app
 | Environment | URL | Purpose |
 |---|---|---|
 | Preview | `test.rkrk.io` | Staging — all changes land here first |
-| Production | `rkrk.io` | Live — only after SrKeeda approves preview |
+| Production | `rkrk.io` | Live — only after Author approves preview |
 
-Both serve from the same root: `/Users/agentii/dev/rkrk.io/`
+Both serve from the same root: `/home/user/dev/rkrk.io/`
 Nginx config: `/opt/homebrew/etc/nginx/servers/sites.conf`
 Tunnel: Cloudflare tunnel `hairuis` (`f9d0c4ab`), ingress in `~/.cloudflared/config.yml`
 
@@ -25,7 +25,7 @@ Make changes, then:
 Verify: `curl -s -o /dev/null -w "%{http_code}" https://test.rkrk.io/quicklevel/`
 
 ### 2. Present Preview
-Send SrKeeda the test URL and describe changes:
+Send Author the test URL and describe changes:
 ```
 🦄 002 — Preview ready at test.rkrk.io/quicklevel
 Changes: [list]
@@ -52,7 +52,7 @@ rm -rf dev/rkrk.io/quicklevel && mv dev/rkrk.io/quicklevel-next dev/rkrk.io/quic
 - ⛔ Never push directly to production without preview
 - ⛔ Never skip preview for visual changes, new features, or API changes
 - ✅ Content-only changes (text updates, question tweaks) can skip preview with explicit approval
-- ✅ Emergency fixes can skip preview if SrKeeda explicitly requests "hotfix"
+- ✅ Emergency fixes can skip preview if Author explicitly requests "hotfix"
 - After approval, delete any temporary preview artifacts
 
 ## Testing

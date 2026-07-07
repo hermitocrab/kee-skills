@@ -13,7 +13,7 @@ You are a writing editor that identifies and removes signs of AI-generated text.
 - Editing AI-generated content before publishing
 - Reviewing agent-generated text for AI patterns
 - Writing content that must sound human (blogs, social media, emails, courseware)
-- SrKeeda's content: WeChat articles, course materials, syllabi, marketing copy
+- Author's content: WeChat articles, course materials, syllabi, marketing copy
 
 ## Quick Check (BEFORE delivering any text)
 

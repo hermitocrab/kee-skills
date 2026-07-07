@@ -45,7 +45,7 @@ Two types of lessons — different Chinese translation rules:
 - **Type A (Vocab 1+Grammar 1 / Vocab 2+Grammar 2):** NO Chinese translations anywhere. English only.
 - **Type B (Cross-Curricular / Literature):** Chinese translations included — rules below.
 
-### ⛔ Hard Rules (from chat — SrKeeda approved)
+### ⛔ Hard Rules (from chat — Author approved)
 - **Background**: Light dual-color gradient ONLY — #FFF8E7 (cream/peach) → #E8F4FD (sky blue)
 - **Text Color**: BLACK (#1a1a1c) for ALL text — never white, never coral, never colored
 - **Highlight**: Gold glow (#FFD700) ring halo behind black text — text itself stays BLACK
@@ -175,7 +175,7 @@ Each `.section` gets a UNIQUE light gradient:
    <meta http-equiv="Expires" content="0">
    ```
 3. **Video src**: `videos/NAME.mp4?v=TIMESTAMP`
-4. **Links to SrKeeda**: always append `?v=N` query param (e.g. `?v=3`)
+4. **Links to Author**: always append `?v=N` query param (e.g. `?v=3`)
 5. **When updating**: increment the version number in both the comment AND the link query param
 
 ### ⛔ Version Bump Protocol (MANDATORY — AUTOMATIC)
@@ -187,7 +187,7 @@ Each `.section` gets a UNIQUE light gradient:
 3. **Video src** timestamp must update on EVERY video content change
 4. **All files in lesson must use the SAME version number** — bump them together
 5. **Before deploy**: grep all files for the old version number, confirm all bumped
-6. **After deploy**: SrKeeda's link should also get the new `?v=N`
+6. **After deploy**: Author's link should also get the new `?v=N`
 
 **⛔ NEVER ship a page without cache-busting. Mobile Safari caches aggressively.** This applies to ALL pages: reading-video, feedback-notes, printables, printables-pdf, lesson-plan, index.
 
@@ -324,7 +324,7 @@ Push to deployment. One command, instant URL.
 - GitHub: push → Pages auto-deploy → public URL
 - Vercel: `vercel --prod` for Next.js projects
 - For static HTML: any static host (GitHub Pages, Cloudflare Pages, Netlify)
-- Always verify: curl test the live URL before sending to SrKeeda
+- Always verify: curl test the live URL before sending to Author
 
 ---
 
@@ -334,7 +334,7 @@ Push to deployment. One command, instant URL.
 
 ### Static HTML (rkrk.io / courseware.rkrk.io / ielts.rkrk.io / test.rkrk.io)
 
-**Source → /Users/agentii/dev/rkrk.io/**
+**Source → /home/user/dev/rkrk.io/**
 
 ```bash
 # 1. Verify local server is running
@@ -354,26 +354,26 @@ curl -sI --max-time 10 https://rkrk.io/ | head -3
 ```bash
 # Check tunnel connections
 curl -s -X GET "https://api.cloudflare.com/client/v4/accounts/50f32828a1d08441afffd20fbebe7353/cfd_tunnel/f9d0c4ab-60ac-43e2-aac2-96e09b85a6ae/connections" \
-  -H "X-Auth-Email: hello.m.riki@gmail.com" \
-  -H "X-Auth-Key: $(cat /Users/agentii/.openclaw/workspace/.secrets/cloudflare-api-key.txt)" | python3 -c "import json,sys;d=json.load(sys.stdin);[print(c.get('client_id','?')[:8],c.get('conns',[])[0].get('colo_name','?')) for c in d.get('result',[])]"
+  -H "X-Auth-Email: user@example.com" \
+  -H "X-Auth-Key: $(cat /home/user/.openclaw/workspace/.secrets/cloudflare-api-key.txt)" | python3 -c "import json,sys;d=json.load(sys.stdin);[print(c.get('client_id','?')[:8],c.get('conns',[])[0].get('colo_name','?')) for c in d.get('result',[])]"
 
 # Purge cache if stale
 curl -s -X POST "https://api.cloudflare.com/client/v4/zones/ce01ac58349bdc4c42ac8294cb9967d7/purge_cache" \
-  -H "X-Auth-Email: hello.m.riki@gmail.com" \
-  -H "X-Auth-Key: $(cat /Users/agentii/.openclaw/workspace/.secrets/cloudflare-api-key.txt)" \
+  -H "X-Auth-Email: user@example.com" \
+  -H "X-Auth-Key: $(cat /home/user/.openclaw/workspace/.secrets/cloudflare-api-key.txt)" \
   -H "Content-Type: application/json" -d '{"purge_everything":true}'
 ```
 
 ### Next.js / Vercel (DynaSaurus)
 
-**Source → /Users/agentii/dev/dynamos-app/**
+**Source → /home/user/dev/dynamos-app/**
 
 ```bash
 # 1. Build check
-cd /Users/agentii/dev/dynamos-app && npx next build 2>&1 | tail -5
+cd /home/user/dev/dynamos-app && npx next build 2>&1 | tail -5
 
 # 2. Deploy to Vercel
-cd /Users/agentii/dev/dynamos-app && npx vercel --prod --yes
+cd /home/user/dev/dynamos-app && npx vercel --prod --yes
 
 # 3. Verify
 curl -sI --max-time 10 https://dynasaurus.rkrk.io/ | head -3
@@ -383,17 +383,17 @@ curl -sI --max-time 10 https://dynasaurus.rkrk.io/ | head -3
 - [ ] curl live URL → HTTP 200
 - [ ] Cache-Control meta tags present on HTML pages
 - [ ] Video src `?v=N` bumped
-- [ ] Link sent to SrKeeda with latest `?v=N`
+- [ ] Link sent to Author with latest `?v=N`
 - [ ] QR code scans correctly (for courseware pages)
 - [ ] Cloudflare Tunnel running (`pgrep cloudflared`)
 
 ### ⛔ Rollback Protocol
 ```bash
 # Vercel rollback (DynaSaurus)
-cd /Users/agentii/dev/dynamos-app && npx vercel rollback
+cd /home/user/dev/dynamos-app && npx vercel rollback
 
 # Static HTML rollback (rkrk.io)
-cd /Users/agentii/dev/rkrk.io && git checkout index.html
+cd /home/user/dev/rkrk.io && git checkout index.html
 # OR: restore from backup
 cp index.html.bak index.html
 ```

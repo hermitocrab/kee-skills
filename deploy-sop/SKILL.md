@@ -17,7 +17,7 @@ description: |
 □ 本地 curl localhost 确认 HTTP 200
 □ 重启相关服务 (server.py / nginx / cloudflared)
 □ curl 外网确认上线
-□ 发 ?v=N 链接给 SrKeeda
+□ 发 ?v=N 链接给 Author
 ```
 
 ## Deploy Targets

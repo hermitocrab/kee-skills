@@ -29,7 +29,7 @@ State is persisted at `memory/mention-state.json`:
 }
 ```
 
-- `sessionKey` — from the inbound message metadata (e.g., `agent:main:imessage:direct:rkrk@me.com`)
+- `sessionKey` — from the inbound message metadata (e.g., `agent:main:imessage:direct:user@example.com`)
 - `pinnedAgent` — the agentId currently handling this conversation
 - `pinnedAt` — when the pin was set (informational)
 - `lastActivity` — last message timestamp (for 3h timeout check)

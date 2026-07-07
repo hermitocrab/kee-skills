@@ -2,7 +2,7 @@
 
 ## ⛔ ABSOLUTE PROHIBITION
 
-**NEVER deploy, redeploy, promote, or alias ANYTHING to dynasaurus.rkrk.io without EXPLICIT, VERBATIM permission from SrKeeda.**
+**NEVER deploy, redeploy, promote, or alias ANYTHING to dynasaurus.rkrk.io without EXPLICIT, VERBATIM permission from Author.**
 
 This means:
 - ❌ `vercel --prod` on the dynamos-app project
@@ -30,13 +30,13 @@ DynaSaurus has THREE sites:
 ## Test-First Workflow (BURNED 2026-06-28)
 
 1. ALL DynaSaurus updates go to **test-dynasaurus.rkrk.io** FIRST
-2. SrKeeda reviews and approves on test
+2. Author reviews and approves on test
 3. Only THEN deploy to product (dynasaurus.rkrk.io)
 4. ⛔ NEVER skip test → go directly to product
 
 ## Trigger Words
 
-If SrKeeda says ANY of these, STOP and ASK for explicit confirmation:
+If Author says ANY of these, STOP and ASK for explicit confirmation:
 - "deploy dynasaurus"
 - "push to dynasaurus"
 - "update dynasaurus.rkrk.io"
@@ -49,4 +49,4 @@ If an unauthorized deploy to dynasaurus.rkrk.io occurs:
 1. Immediately stop all further deploys
 2. Check `vercel list` to identify the pre-incident production deployment
 3. `vercel promote` the correct deployment back
-4. Report to SrKeeda
+4. Report to Author

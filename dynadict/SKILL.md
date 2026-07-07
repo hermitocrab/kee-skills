@@ -1,12 +1,12 @@
 ---
 name: dynasaurus
 model: deepseek/deepseek-v4-pro
-description: Generate personalized RUA-powered vocabulary prompts for Kee Lee's students. DynaDict (rebranded DynaSaurus 🦕) is a 4-module AI tutoring system — Dictionary, Smart Translator, Grammar Doctor, IELTS Coach. Use when SrKeeda asks to generate a DynaDict prompt, create vocabulary materials for a student, or mentions "dynadict" / "dynasaurus" / "RUA prompt".
+description: Generate personalized RUA-powered vocabulary prompts for Author's students. DynaDict (rebranded DynaSaurus 🦕) is a 4-module AI tutoring system — Dictionary, Smart Translator, Grammar Doctor, IELTS Coach. Use when Author asks to generate a DynaDict prompt, create vocabulary materials for a student, or mentions "dynadict" / "dynasaurus" / "RUA prompt".
 ---
 
 # DynaDict / DynaSaurus 🦕
 
-RUA 3.0 全能私教 — Kee Lee's prompt-native AI tutoring system. Generates personalized vocabulary prompts that work in any AI chat.
+RUA 3.0 全能私教 — Author's prompt-native AI tutoring system. Generates personalized vocabulary prompts that work in any AI chat.
 
 ## Core Parameters (Collect Before Generating)
 
@@ -53,7 +53,7 @@ Input: IELTS topic/question → 7-stage speaking practice (S1–S7)
 ## Prompt Template
 
 ```
-You are Kee Lee's DynaSaurus, a personalized AI vocabulary tutor.
+You are Author's DynaSaurus, a personalized AI vocabulary tutor.
 
 Student Profile:
 - Level: [Level]
@@ -93,4 +93,4 @@ Rules:
 
 Live at `https://dynasaurus.rkrk.io` — DynaSaurus landing page with persona stories (Kai, Maya, Alex) and RUA methodology showcase.
 
-Source: `/Users/agentii/dev/rkrk.io/dynamos/dynadict.html`
+Source: `/home/user/dev/rkrk.io/dynamos/dynadict.html`

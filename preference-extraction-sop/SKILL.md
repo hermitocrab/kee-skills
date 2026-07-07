@@ -1,21 +1,21 @@
 ---
 name: preference-extraction-sop
 description: |
-  Auto-extract SrKeeda's design/style preferences after every session. 
+  Auto-extract Author's design/style preferences after every session. 
   Update USER.md + relevant skills with product-specific requirements.
-  Burned 2026-07-07 — SrKeeda: "你要学会自动总结我的喜好和设计风格要求，不同产品的不同要求都要体现，每次session结束自动总结，把这个做成sop"
+  Burned 2026-07-07 — Author: "你要学会自动总结我的喜好和设计风格要求，不同产品的不同要求都要体现，每次session结束自动总结，把这个做成sop"
 ---
 
 # Preference Extraction SOP — 自动偏好提取
 
-> 每次 session 结束后自动运行。提取 SrKeeda 的设计偏好、产品要求、风格倾向。
+> 每次 session 结束后自动运行。提取 Author 的设计偏好、产品要求、风格倾向。
 
 ## ⛔ 规则
 
-每次 session 结束时（或 SrKeeda 长时间不回复时），自动：
+每次 session 结束时（或 Author 长时间不回复时），自动：
 
 ### Step 1: Review Corrections
-搜索当前 session 中 SrKeeda 的纠正：
+搜索当前 session 中 Author 的纠正：
 - "don't do X" / "别做X"
 - "change Y to Z" / "把Y改成Z"
 - "这不对" / "为什么不是"
@@ -55,6 +55,6 @@ Session 结束时输出：
 ```
 
 ## 反模式
-- ❌ 等 SrKeeda 说"记下来"才记 → 主动提取
+- ❌ 等 Author 说"记下来"才记 → 主动提取
 - ❌ 偏好存在"脑子里" → 必须写入文件
 - ❌ 所有产品用一套规则 → 按产品分类

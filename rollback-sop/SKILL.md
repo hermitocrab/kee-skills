@@ -12,11 +12,11 @@ cd project-dir && npx vercel ls --next <token>
 # Alias the good deployment to production
 npx vercel alias <good-deployment-url> <production-domain>
 # Example:
-npx vercel alias dynamos-160r7lpnr-hermitocrabs-projects.vercel.app dynasaurus.rkrk.io
+npx vercel alias dynamos-160r7lpnr-REDACTED_USERs-projects.vercel.app dynasaurus.rkrk.io
 ```
 
 ## 2. VERCEL DASHBOARD ROLLBACK (30 seconds)
-1. https://vercel.com/hermitocrabs-projects/<project>/deployments
+1. https://vercel.com/REDACTED_USERs-projects/<project>/deployments
 2. Find the good deployment
 3. Click ⋮ → Instant Rollback
 4. Confirm
@@ -31,7 +31,7 @@ git push
 
 ## 4. RE-DEPLOY FROM BACKUP (minutes)
 ```bash
-cd /Users/agentii/dev/dynamos-app-vercel  # or any backup dir
+cd /home/user/dev/dynamos-app-vercel  # or any backup dir
 npx vercel --prod --yes
 ```
 
@@ -44,8 +44,8 @@ npx vercel --prod --yes
 ## PROJECT GITHUB REPOS
 | Project | GitHub |
 |---------|--------|
-| dynasaurus.rkrk.io | github.com/hermitocrab/dynasaurus |
-| rkrk.io | github.com/hermitocrab/rkrk.io |
-| ielts.rkrk.io | github.com/hermitocrab/ielts-with-kee |
-| dynasaurus-preview | github.com/hermitocrab/dynasaurus-preview |
-| hairuis-checkin | github.com/hermitocrab/hairuis-checkin |
+| dynasaurus.rkrk.io | github.com/REDACTED_USER/dynasaurus |
+| rkrk.io | github.com/REDACTED_USER/rkrk.io |
+| ielts.rkrk.io | github.com/REDACTED_USER/ielts-with-kee |
+| dynasaurus-preview | github.com/REDACTED_USER/dynasaurus-preview |
+| hairuis-checkin | github.com/REDACTED_USER/hairuis-checkin |

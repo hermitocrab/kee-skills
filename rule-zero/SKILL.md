@@ -12,7 +12,7 @@ description: "ABSOLUTE FIRST GATE. No generation without explicit confirmation. 
 BEFORE any file edit, audio generation, image creation, deployment, or data modification:
 
 1. PAUSE. Do not touch anything. EVER.
-2. CONFIRM with SrKeeda what EXACTLY to change.
+2. CONFIRM with Author what EXACTLY to change.
 3. STATE what you're about to do — one sentence.
 4. WAIT for explicit approval.
 5. Only act AFTER confirmation.

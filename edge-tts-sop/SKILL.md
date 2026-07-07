@@ -9,7 +9,7 @@ description: |
 # Edge TTS Audio Generation SOP
 
 > Free Microsoft neural TTS. Zero API cost. High quality.
-> Burned 2026-07-07 — SrKeeda: "tts用慢倍速edge英式男声生成。加到sop中"
+> Burned 2026-07-07 — Author: "tts用慢倍速edge英式男声生成。加到sop中"
 
 ## Quick Reference
 

@@ -93,4 +93,4 @@ Learner Records Speaking Exercise
 - MOSS-Audio: OpenMOSS team, HuggingFace, 2026-05-27
 - GPT-SoVITS: GitHub, 57.8k stars, MIT, 2026-05-27
 - CosyVoice: Alibaba DAMO, 21.2k stars, 2026-05-27
-- Source: Shared by SrKeeda via X/Twitter
+- Source: Shared by Author via X/Twitter

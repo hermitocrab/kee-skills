@@ -1,7 +1,7 @@
 # video-subtitle-pipeline
 
 ## WHEN TO LOAD
-When SrKeeda asks to download YouTube videos or add bilingual subtitles to video content for any website (ielts.rkrk.io, courseware, etc.).
+When Author asks to download YouTube videos or add bilingual subtitles to video content for any website (ielts.rkrk.io, courseware, etc.).
 
 ## ⛔ PREREQUISITE: VPN TUN MODE (MANDATORY)
 **YouTube SABR enforcement blocks all yt-dlp downloads without VPN.** Do NOT attempt download without VPN TUN mode active. Do NOT waste time debugging 403 errors.
@@ -14,7 +14,7 @@ When SrKeeda asks to download YouTube videos or add bilingual subtitles to video
 
 ### Config File (if GUI unavailable)
 ```yaml
-# /Users/agentii/Library/Application Support/io.github.clash-verge-rev.clash-verge-rev/config.yaml
+# /home/user/Library/Application Support/io.github.clash-verge-rev.clash-verge-rev/config.yaml
 tun:
   enable: true  # ← change from false to true
   stack: gvisor

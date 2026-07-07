@@ -1,10 +1,10 @@
 ---
 name: design-system-kee
 description: |
-  Kee Lee's visual design system. Colors, typography, spacing, cards, dark mode, mobile rules, and anti-patterns. Load BEFORE any visual output — HTML pages, slides, landing pages, dashboards, courseware, or frontend builds. Contains the cumulative design corrections and preferences from all design sessions.
+  Author's visual design system. Colors, typography, spacing, cards, dark mode, mobile rules, and anti-patterns. Load BEFORE any visual output — HTML pages, slides, landing pages, dashboards, courseware, or frontend builds. Contains the cumulative design corrections and preferences from all design sessions.
 ---
 
-# Design System — Kee Lee (SrKeeda)
+# Design System — Author (Author)
 
 > Last updated: 2026-06-23
 > Source: 550+ main sessions April–June 2026, memory files, SOUL.md, MEMORY.md, design-protocol.md
@@ -13,9 +13,9 @@ description: |
 
 ## ⛔ RULE ZERO — ASK BEFORE ANY DESIGN CHANGE
 
-If another agent just revamped a page, do NOT revamp it again without SrKeeda's explicit approval. Different agents have different taste. We serve ONE visual identity.
+If another agent just revamped a page, do NOT revamp it again without Author's explicit approval. Different agents have different taste. We serve ONE visual identity.
 
-**Source:** 2026-05-24 rkrk.io landing page multi-revamp chaos. SrKeeda furious after 002 changed things without asking.
+**Source:** 2026-05-24 rkrk.io landing page multi-revamp chaos. Author furious after 002 changed things without asking.
 
 ---
 
@@ -44,7 +44,7 @@ Secondary:      #D97706 / #C2410C (warm orange/gold — rkrk.io landing)
 Gray scale:     #F5F5F5 / #E0E0E0 / #999 / #666
 ```
 
-**Source:** design-protocol.md, 2026-05-24 rkrk.io v2.1 editorial final. SrKeeda approved warm orange/gold palette after rejecting multiple alternatives.
+**Source:** design-protocol.md, 2026-05-24 rkrk.io v2.1 editorial final. Author approved warm orange/gold palette after rejecting multiple alternatives.
 
 ### Typography
 ```
@@ -72,7 +72,7 @@ Border:         1px solid #E0E0E0 between sections and on cards
 
 ### Navigation (rkrk.io)
 - Fixed top, white bg with 97% opacity + `backdrop-filter: blur(24px) saturate(1.5)`
-- Logo: "Kee Lee" with red dot accent
+- Logo: "Author" with red dot accent
 - Links: uppercase, 0.68rem, 600 weight, gray-600
 - "Contact Kee" red filled button — always visible
 - Quick access buttons: thin bordered (#s: DynamOS, DynaSaurus, IELTS)
@@ -197,7 +197,7 @@ Hover:          NEVER use :hover transforms that change layout dimensions
 
 ## 🚫 ANTI-PATTERNS — NEVER DO THESE
 
-### Visual Anti-Patterns (from SrKeeda corrections)
+### Visual Anti-Patterns (from Author corrections)
 | ❌ NEVER | Date Corrected | Context |
 |----------|---------------|---------|
 | Centered hero over dark mesh gradient | 2026-05-24 | rkrk.io v2.0 Dark rejected |
@@ -218,7 +218,7 @@ Hover:          NEVER use :hover transforms that change layout dimensions
 ### Process Anti-Patterns
 | ❌ NEVER | Reason |
 |----------|--------|
-| Change a page another agent just revamped | Without SrKeeda's explicit approval |
+| Change a page another agent just revamped | Without Author's explicit approval |
 | Change color palette without asking | Palette is locked per system |
 | Add/remove sections without asking | Section structure is approved |
 | Mix fonts across pages in same domain | One domain = one type system |
@@ -305,7 +305,7 @@ Include: System name + version number + brief description of what changed.
 
 ## 📋 CONTENT AUDIT REFERENCES
 
-Reference sites SrKeeda approves of (when in doubt, match these vibes):
+Reference sites Author approves of (when in doubt, match these vibes):
 - **Apple Wallet** — card flip mechanics
 - **NYT Magazine** — editorial type, breathing room, pull quotes
 - **Stripe Docs** — progressive disclosure, color as signifier
@@ -353,7 +353,7 @@ Reference sites SrKeeda approves of (when in doubt, match these vibes):
 Before ANY visual change:
 1. State what EXACTLY will change
 2. Show the proposed palette/font/layout
-3. WAIT for SrKeeda's explicit approval
+3. WAIT for Author's explicit approval
 4. Apply only what was approved
 5. Never "while I'm here" add unapproved changes
 6. Version-tag the deploy

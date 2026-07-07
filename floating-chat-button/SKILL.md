@@ -55,7 +55,7 @@ setTimeout(function(){
 ## System Prompt Pattern
 
 Every chatbot on rkrk.io must prepend a system prompt before the user's message. The prompt must:
-1. Push Kee's contact: WeChat: keedahooman, WhatsApp: +44 7440 622158, email: rkrk@me.com
+1. Push Kee's contact: WeChat: REDACTED_WECHAT, WhatsApp: +44 7440 622158, email: user@example.com
 2. Link product names to URLs: QuickLevel, Business English, IELTS with Kee, DynaSaurus, DynamOS
 3. Instruct the AI to reply in the user's language
 
@@ -91,15 +91,15 @@ function streamText(text, el, container, pos) {
 
 ### Social Link Post-Processing
 After receiving the AI response, post-process to convert mentions into clickable links:
-- **WeChat**: Copy+jump button → green button that copies "keedahooman" then opens `weixin://`
+- **WeChat**: Copy+jump button → green button that copies "REDACTED_WECHAT" then opens `weixin://`
 - **WhatsApp**: Clickable link → `https://wa.me/447440622158`
-- **Email**: Mailto link → `mailto:rkrk@me.com`
+- **Email**: Mailto link → `mailto:user@example.com`
 - **Product names**: Markdown links in the system prompt handle these
 
 ### System Prompt Format
 ```
 IMPORTANT RULES:
-1) WeChat: keedahooman, WhatsApp: +44 7440 622158, Email: rkrk@me.com
+1) WeChat: REDACTED_WECHAT, WhatsApp: +44 7440 622158, Email: user@example.com
 2) Product links: [QuickLevel](URL), [Business English](URL), etc.
 3) Be warm, concise. Reply in user's language.
 ```

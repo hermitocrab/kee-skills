@@ -2,7 +2,7 @@
 name: pre-action-sop
 description: |
   Pre-action verification — check API keys, match user preferences, verify source of truth before acting.
-  Burned 2026-06-30 — SrKeeda: "确保你真的写进memory 做成sop"
+  Burned 2026-06-30 — Author: "确保你真的写进memory 做成sop"
   Triggered by: "调用API", "用Supabase", "用key", "验证", "before acting"
 ---
 
@@ -15,12 +15,12 @@ description: |
 
 ### Step 1: VERIFY-KEY — 验证密钥
 - Curl-test 每个 API key 再用
-- 源 key 只能来自：.env.local / Vercel env vars / SrKeeda 明确给的
+- 源 key 只能来自：.env.local / Vercel env vars / Author 明确给的
 - 如果 key 包含省略号 `…` → 是占位符，不能用
 - 命令：`curl -s "<endpoint>" -H "apikey: <full_key>" | head -5`
 
 ### Step 2: MATCH-PREFERENCE — 匹配偏好
-- 回想 SrKeeda 当前 session 之前说过什么
+- 回想 Author 当前 session 之前说过什么
 - 他说 "no cron" → 不建 cron
 - 他说 "no images" → 不加图片
 - 他说 "don't deploy yet" → 不部署
@@ -35,4 +35,4 @@ description: |
 ## 反模式
 - ❌ 看 key 像过期了 → 不测试就声称过期
 - ❌ 没看 .env.local → 说 key 找不到了
-- ❌ 记得 SrKeeda 说过 X → 不搜索聊天记录确认
+- ❌ 记得 Author 说过 X → 不搜索聊天记录确认

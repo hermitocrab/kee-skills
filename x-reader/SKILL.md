@@ -52,4 +52,4 @@ Often returns empty `{}`. Prefer vxtwitter.
 
 ## Learned
 
-2026-05-27 — Discovered vxtwitter API after failing to read two X articles SrKeeda shared. This should be the first tool tried for any X/Twitter link.
+2026-05-27 — Discovered vxtwitter API after failing to read two X articles Author shared. This should be the first tool tried for any X/Twitter link.

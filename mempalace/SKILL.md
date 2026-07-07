@@ -39,8 +39,8 @@ mempalace wake-up --wing product_protocol
 | `workspace` | `editorial_slide_designer` | 94 | Editorial design skill |
 
 ## Binaries
-- CLI: `/Users/hermitclaw/Library/Python/3.9/bin/mempalace`
-- MCP: `/Users/hermitclaw/Library/Python/3.9/bin/mempalace-mcp`
+- CLI: `/Users/REDACTED_USER/Library/Python/3.9/bin/mempalace`
+- MCP: `/Users/REDACTED_USER/Library/Python/3.9/bin/mempalace-mcp`
 - Version: 3.3.3 (pip3)
 - Palace: `~/.mempalace/palace`
 

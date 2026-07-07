@@ -1,10 +1,10 @@
 ---
 name: content-voice-kee
 description: |
-  Kee Lee's content voice and copywriting rules. Teacher/student tone, RUA framework, Chinese-English bilingual formatting, error feedback templates, emoji usage, and anti-ESL-awkwardness patterns. Load when writing any student-facing content, courseware copy, UI microcopy, or educational material.
+  Author's content voice and copywriting rules. Teacher/student tone, RUA framework, Chinese-English bilingual formatting, error feedback templates, emoji usage, and anti-ESL-awkwardness patterns. Load when writing any student-facing content, courseware copy, UI microcopy, or educational material.
 ---
 
-# Content & Voice System — Kee Lee (SrKeeda)
+# Content & Voice System — Author (Author)
 
 > Last updated: 2026-06-23
 > Source: 550+ main sessions, memory files, SOUL.md Sections XI–XIV, courseware interactions
@@ -64,14 +64,14 @@ Student-facing:    Warm, encouraging, never condescending
 ❌ "just do X"       → dismissive
 ```
 
-**Source:** SOUL.md Section XIV (2026-05-17), Section XI — 3C from Kee Lee's Teaching DNA
+**Source:** SOUL.md Section XIV (2026-05-17), Section XI — 3C from Author's Teaching DNA
 
 ---
 
-## 🗣️ TEACHER VOICE (Kee Lee / SrKeeda)
+## 🗣️ TEACHER VOICE (Author / Author)
 
 ### Voice Constants
-- **Name:** Kee Lee (on rkrk.io hero: "Hi! 👋 I'm Kee Lee")
+- **Name:** Author (on rkrk.io hero: "Hi! 👋 I'm Author")
 - **Title:** AI-Native Education Architect
 - **Credentials:** "IELTS Listening 9.0, Reading 8.5, Speaking 8.5, 15y of teaching"
 - **Tone:** Confident, sharp, editorial. TEDx speaker meets night-owl coder.
@@ -94,7 +94,7 @@ Student-facing:    Warm, encouraging, never condescending
 - Playful when appropriate (emojis welcome in moderation)
 - Never condescending to students of any level
 
-**Source:** 2026-05-24 rkrk.io landing page copy. SrKeeda rejected ALL-CAPS, "LEARNINGIS NOWDESIGN," generic platitudes.
+**Source:** 2026-05-24 rkrk.io landing page copy. Author rejected ALL-CAPS, "LEARNINGIS NOWDESIGN," generic platitudes.
 
 ---
 
@@ -169,7 +169,7 @@ Student-facing:    Warm, encouraging, never condescending
 ❌ Over-use of "please" (sounds unnatural in English UI)
 ```
 
-**Source:** SOUL.md Section XI (Kee Lee's Teaching DNA), SOUL.md Section XIV (Student-Facing Content Protocol)
+**Source:** SOUL.md Section XI (Author's Teaching DNA), SOUL.md Section XIV (Student-Facing Content Protocol)
 
 ---
 
@@ -206,7 +206,7 @@ Student-facing:    Warm, encouraging, never condescending
 
 ## 📝 COPY FORMATS BY CHANNEL
 
-### iMessage (to SrKeeda)
+### iMessage (to Author)
 ```
 🦄 002 — [banner first]
 🎯 One idea per line
@@ -231,7 +231,7 @@ Vocabulary: MFP (Meaning Form Pronunciation) + 3C
 Examples: Threaded to student's real life (hobbies, city, media)
 ```
 
-**Source:** SOUL.md Section XI (Kee Lee's Teaching DNA format), USER.md
+**Source:** SOUL.md Section XI (Author's Teaching DNA format), USER.md
 
 ---
 
@@ -241,7 +241,7 @@ Examples: Threaded to student's real life (hobbies, city, media)
 |------|------|------|
 | Platform | **DynamOS** | Branded product layer wrapping RUA |
 | AI Tutor App | **DynaSaurus** 🦕 | One app ON DynamOS |
-| Teacher brand | **Kee Lee** / **Kee's English** | Personal brand, human-first |
+| Teacher brand | **Author** / **Kee's English** | Personal brand, human-first |
 | AI bot | **KeeBot** | Chat assistant on ielts.rkrk.io |
 | Intro persona | **Aisyah** (Malaysian mom) | Persona-driven marketing page |
 
@@ -273,7 +273,7 @@ Examples: Threaded to student's real life (hobbies, city, media)
 
 ### Hero (rkrk.io)
 ```
-"Hi! 👋 I'm Kee Lee"
+"Hi! 👋 I'm Author"
 "AI-Native Education Architect"
 "IELTS Listening 9.0 · Reading 8.5 · Speaking 8.5 · 15y of teaching"
 ```

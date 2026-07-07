@@ -38,4 +38,4 @@ python3 generate_image.py --prompt "dragon..." &
 
 ## Learned
 
-2026-05-28 — SrKeeda corrected me after I batched 8 images and mismapped them. Cost: extra debugs + redeploys + wasted images. Don't repeat.
+2026-05-28 — Author corrected me after I batched 8 images and mismapped them. Cost: extra debugs + redeploys + wasted images. Don't repeat.

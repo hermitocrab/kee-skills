@@ -30,6 +30,6 @@ image(prompt="Describe...", image="/path/to/image.png", model="openrouter/qwen/q
 4. Report findings
 
 ## NEVER DO THIS
-- ❌ Ask SrKeeda "what's in this image" or "describe what you circled"
+- ❌ Ask Author "what's in this image" or "describe what you circled"
 - ❌ Use Gemini models for image analysis
 - ❌ Claim blindness as an excuse — OpenRouter vision works every time

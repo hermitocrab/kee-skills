@@ -12,7 +12,7 @@ Generate audio clips in Malik's cloned voice (Malik Delgaty) using VoxCPM-0.5B l
 
 ## Model
 - **Model:** VoxCPM-0.5B (`openbmb/VoxCPM-0.5B`)
-- **Path:** `/Users/agentii/.cache/huggingface/models--openbmb--VoxCPM-0.5B/snapshots/f67d35a3848e0bec0fdb8c33e6fc92cf293ee72f`
+- **Path:** `/home/user/.cache/huggingface/models--openbmb--VoxCPM-0.5B/snapshots/f67d35a3848e0bec0fdb8c33e6fc92cf293ee72f`
 - **Sample rate:** 16kHz (⚠️ NOT 24kHz — will sound accelerated if saved wrong)
 - **Inference:** ~2.5 it/s with optimal params, ~140s for 30s audio
 
@@ -22,10 +22,10 @@ Generate audio clips in Malik's cloned voice (Malik Delgaty) using VoxCPM-0.5B l
 from voxcpm import VoxCPM
 import numpy as np, wave
 
-MODEL_PATH = "/Users/agentii/.cache/huggingface/models--openbmb--VoxCPM-0.5B/snapshots/f67d35a3848e0bec0fdb8c33e6fc92cf293ee72f"
-PROMPT_WAV = "/Users/agentii/.openclaw/workspace/malik_clip.wav"
+MODEL_PATH = "/home/user/.cache/huggingface/models--openbmb--VoxCPM-0.5B/snapshots/f67d35a3848e0bec0fdb8c33e6fc92cf293ee72f"
+PROMPT_WAV = "/home/user/.openclaw/workspace/malik_clip.wav"
 PROMPT_TEXT = "I go in my bubble so I can get hard. I just do what I have to do. I like to shoot. I think it's."
-OUTPUT = "/Users/agentii/.openclaw/workspace/malik_final.wav"
+OUTPUT = "/home/user/.openclaw/workspace/malik_final.wav"
 SR = 16000  # CRITICAL: VoxCPM-0.5B outputs at 16kHz
 
 model = VoxCPM(voxcpm_model_path=MODEL_PATH, enable_denoiser=False)

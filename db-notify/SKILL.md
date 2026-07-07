@@ -52,7 +52,7 @@ def notify(row_id, data):
 - Subprocess timeout at 10s so a hung osascript doesn't leak threads.
 - Capture osascript output with `capture_output=True` to suppress stdout noise.
 - Print notification result to server log for debugging.
-- `RECIPIENT` is the iMessage handle (e.g. `rkrk@me.com`).
+- `RECIPIENT` is the iMessage handle (e.g. `user@example.com`).
 - Escape double quotes in message content: `msg.replace('"', '\\"')` before passing to AppleScript.
 - If notification content contains newlines, AppleScript needs `\\n` — construct message inline without literal newlines, or replace `\n` with space.
 

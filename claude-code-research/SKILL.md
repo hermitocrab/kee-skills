@@ -65,4 +65,4 @@ Claude Code isn't just a chatbot for finance — it's a **brain that runs your w
 ## Reference
 - Original article: "How I Set Up Claude Code as My Investment Research Analyst" by leopardracer
 - Anthropic Claude for Finance lecture (37 min video, linked by @Av1dlive)
-- Learned: 2026-05-27 from SrKeeda's shared X articles
+- Learned: 2026-05-27 from Author's shared X articles

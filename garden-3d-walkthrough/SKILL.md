@@ -1,6 +1,6 @@
 # Garden 3D Walkthrough Skill 🌿
 
-Reverse-engineered from MrLarus (@MrLarus) X thread (May 2026): 2D floor plan → 3D renders → walkthrough video. Adapted for SrKeeda's garden project.
+Reverse-engineered from MrLarus (@MrLarus) X thread (May 2026): 2D floor plan → 3D renders → walkthrough video. Adapted for Author's garden project.
 
 ## Source Thread
 - Original tweet: https://x.com/MrLarus/status/2059225390372065305
@@ -253,7 +253,7 @@ Walk along hedge boundary → Geranium ribbon at feet → reach utility strip �
 
 ---
 
-## Tool Selection (CONFIRMED by SrKeeda 2026-06-01)
+## Tool Selection (CONFIRMED by Author 2026-06-01)
 
 **All through Atlas Cloud API. Single key. Single platform.**
 
@@ -313,6 +313,6 @@ curl -o output.png "URL_FROM_OUTPUTS"
 ---
 
 ## Usage
-When SrKeeda says the layout is ready, load this skill, read the latest CAD file, and execute the 3-step pipeline. Adapt prompts based on which AI tools are available at that time.
+When Author says the layout is ready, load this skill, read the latest CAD file, and execute the 3-step pipeline. Adapt prompts based on which AI tools are available at that time.
 
 Created: 2026-06-01 from MrLarus reverse-engineering + existing Garden_Design_002.md + CAD catalogs

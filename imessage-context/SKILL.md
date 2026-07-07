@@ -15,12 +15,12 @@ description: "MANDATORY startup routine for new iMessage sessions. Check imsg ch
    ```bash
    imsg chats --limit 5 --json
    ```
-2. Find the chat with `identifier: rkrk@me.com` — get its `id`
+2. Find the chat with `identifier: user@example.com` — get its `id`
 3. Pull recent history:
    ```bash
    imsg history --chat-id <ID> --limit 50 --json
    ```
-4. Review the last 20+ messages from SrKeeda (sender `rkrk@me.com`, `is_from_me: false`) to understand what he was working on
+4. Review the last 20+ messages from Author (sender `user@example.com`, `is_from_me: false`) to understand what he was working on
 5. Look for: active projects, pending fixes, complaints, feature requests, voice/style preferences
 6. Only THEN respond
 
