@@ -38,7 +38,7 @@ State is persisted at `memory/mention-state.json`:
 
 | Handle | Agent ID | Alias(es) |
 |--------|----------|-----------|
-| `@002` | main | `@me`, `@agentii` |
+| `@002` | main | `@me`, `@user` |
 | `@malik` | malik | — |
 | `@prompt` | prompt-architect | — |
 | `@dynadict` | dynadict-generator | `@dict` |
